@@ -1,0 +1,9 @@
+{
+  "name": "ProfCI",
+  "short_name": "ProfCI",
+  "description": "Plateforme éducative ProfCI créée par Adjoumani Kouabenan Beboumane Richmin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a"
+}
