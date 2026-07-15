@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfCI - Cours pour Elèves de CI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #f0f4f8; color: #333; }
+        header { background: #1e3a8a; color: white; padding: 15px 20px; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav h1 { font-size: 20px; }
+        nav a { color: white; text-decoration: none; margin-left: 15px; font-size: 14px; }
+        .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+        .card { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .btn { background: #1e3a8a; color: white; padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px; }
+        .btn:hover { background: #0f2167; }
+        .lesson { border-left: 4px solid #1e3a8a; padding-left: 15px; }
+        .example { background: #e0f7ff; padding: 10px; border-radius: 5px; margin-top: 10px; }
+        .pricing { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        @media(min-width: 700px) { .pricing { grid-template-columns: 1fr 1fr 1fr; } }
+        .plan { border: 2px solid #ddd; padding: 20px; border-radius: 10px; text-align: center; }
+        .plan.premium { border-color: #f59e0b; background: #fffbeb; }
+        .price { font-size: 28px; font-weight: bold; color: #1e3a8a; margin: 10px 0; }
+        code { background: #eee; padding: 2px 5px; border-radius: 3px; }
+        footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>📚 ProfCI</h1>
+        <div>
+            <a href="#accueil">Accueil</a>
+            <a href="#lecon">Cours</a>
+            <a href="#paiement">Abonnement</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- ACCUEIL -->
+    <section id="accueil" class="card">
+        <h2>Bienvenue sur ProfCI 🇨🇮</h2>
+        <p>La plateforme pour réviser toutes les matières du Collège et Lycée en Côte d'Ivoire.</p>
+        <p style="margin-top:10px;">Math, PC, Français, HG... Des leçons simples + Exercices corrigés.</p>
+        <a href="#lecon"><button class="btn">Commencer à apprendre</button></a>
+    </section>
+
+    <!-- COURS -->
+    <section id="lecon" class="card">
+        <h2 style="text-align:center; color:#1e3a8a; margin-bottom:20px;">📚 Leçons Disponibles</h2>
+
+        <div class="lesson">
+            <h3>Leçon 1 : Les Équations du 1er degré</h3>
+            <p><b>Définition :</b> Une équation du 1er degré est de la forme <code>ax + b = 0</code></p>
+            <div class="example">
+                <h4>📝 Exemple :</h4>
+                <p>Résous : <code>2x + 4 = 10</code></p>
+                <p><b>Solution :</b> <code>2x = 6</code> → <code>x = 3</code> ✅</p>
+            </div>
+        </div>
+
+        <div class="lesson" style="margin-top:30px;">
+            <h3>Leçon 2 : Les Fractions</h3>
+            <p><b>Règle :</b> Pour additionner 2 fractions, on met au même dénominateur.</p>
+            <div class="example">
+                <h4>📝 Exemple :</h4>
+                <p>Calcule : <code>1/2 + 1/4</code></p>
+                <p><b>Solution :</b> <code>2/4 + 1/4 = 3/4</code> ✅</p>
+            </div>
+        </div>
+
+        <div class="lesson" style="margin-top:30px;">
+            <h3>Leçon 3 : La Puissance</h3>
+            <p><b>Règle :</b> <code>a^n × a^m = a^(n+m)</code></p>
+            <div class="example">
+                <h4>📝 Exemple :</h4>
+                <p>Calcule : <code>2^3 × 2^2</code></p>
+                <p><b>Solution :</b> <code>2^(3+2) = 2^5 = 32</code> ✅</p>
+            </div>
+        </div>
+
+        <div class="lesson" style="margin-top:30px; background:#fffbeb; border:2px dashed #f59e0b; padding:15px; border-radius:8px;">
+            <h3>Leçon 4 : Système d'équations 🔒 Premium</h3>
+            <p>Accès à +100 leçons, exercices et corrigés réservés aux abonnés Premium</p>
+            <a href="#paiement"><button class="btn">Débloquer Premium</button></a>
+        </div>
+    </section>
+
+    <!-- PAIEMENT -->
+    <section id="paiement" class="card">
+        <h3 style="text-align:center; color:#1e3a8a; margin-bottom:20px;">Abonnement ProfCI</h3>
+        <div class="pricing">
+            <div class="plan">
+                <h4>Gratuit</h4>
+                <div class="price">0 FCFA</div>
+                <p>✓ Accès à 3 leçons</p>
+                <button class="btn">Activer</button>
+            </div>
+            <div class="plan premium">
+                <h4>Premium Mensuel</h4>
+                <div class="price">2500 FCFA</div>
+                <p>✓ Accès illimité</p>
+                <p>✓ Exercices + Corrigés</p>
+                <div style="background:#e0f7ff; padding:15px; border-radius:8px; margin:15px 0;">
+                    <p><b>Étape 1 :</b> Envoyez 2500 FCFA sur Wave</p>
+                    <h2 style="color:#00d1ff; margin:5px 0;">05 08 01 77 02</h2>
+                    <p><b>Étape 2 :</b> Envoyez la capture</p>
+                </div>
+                <a href="https://wa.me/2250508017702?text=Bonjour%20ProfCI%2C%20j%27ai%20pay%C3%A9%202500%20FCFA" target="_blank">
+                    <button class="btn" style="background:#25D366;">Envoyer sur WhatsApp</button>
+                </a>
+            </div>
+            <div class="plan">
+                <h4>Premium Annuel</h4>
+                <div class="price">25000 FCFA</div>
+                <p>✓ 2 mois offerts</p>
+                <div style="background:#e0f7ff; padding:15px; border-radius:8px; margin:15px 0;">
+                    <p><b>Envoyez 25000 FCFA sur Wave</b></p>
+                    <h2 style="color:#00d1ff; margin:5px 0;">05 08 01 77 02</h2>
+                </div>
+                <a href="https://wa.me/2250508017702?text=Bonjour%20ProfCI%2C%20j%27ai%20pay%C3%A9%2025000%20FCFA" target="_blank">
+                    <button class="btn" style="background:#25D366;">Envoyer sur WhatsApp</button>
+                </a>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:15px; font-size:12px;">Validation sous 5min après réception du paiement</p>
+    </section>
+
+</div>
+
+<footer>
+    Created by Adjoumani Kouabenan Beboumane Richmin © 2026 ProfCI
+</footer>
+
+</body>
+</html>
